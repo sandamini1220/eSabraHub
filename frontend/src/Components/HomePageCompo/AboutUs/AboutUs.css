@@ -1,0 +1,16 @@
+.aboutUs-container {
+    margin: 50px auto;
+}
+
+.aboutUs-container h1 {
+    color: #151414;
+    text-align: center;
+}
+
+.aboutUs-container .hrtag {
+    width: 50px;
+    height: 3px;
+    background-color: #dd7413;
+    border: none; 
+    margin: 5px auto; 
+}

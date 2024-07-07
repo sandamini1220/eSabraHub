@@ -37,7 +37,7 @@ const Hero = () => {
   }, [currentWord, isDeleting, typingInterval, loopNum]);
 
   return (
-    <div className='hero'>
+    <div className='hero' id='heroId'>
       <div className="leftSide-hero">
       <div className="welcomeText">
         <h2>Hey </h2>

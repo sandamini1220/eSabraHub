@@ -12,6 +12,7 @@ import AttractivePlacesPage from './Pages/Services/AttractivePlacesPage'
 import FoodsPage from './Pages/Services/FoodsPage'
 import MedicinePage from './Pages/Services/MedicinePage'
 import TransportPage from './Pages/Services/TransportPage'
+import AboutUs from './Components/HomePageCompo/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
           <Route path="/food" element={<FoodsPage />} />
           <Route path="/medicine" element={<MedicinePage />} />
           <Route path="/places" element={<AttractivePlacesPage />} />
+          <Route path="/about" element={<AboutUs />} />
+
+         
+
         </Routes>
         </div>
       </div>
