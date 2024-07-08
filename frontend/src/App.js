@@ -13,6 +13,7 @@ import FoodsPage from './Pages/Services/FoodsPage'
 import MedicinePage from './Pages/Services/MedicinePage'
 import TransportPage from './Pages/Services/TransportPage'
 import AboutUs from './Components/HomePageCompo/AboutUs/AboutUs';
+import Footer from './Components/HomePageCompo/Footer/Footer';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
          
 
         </Routes>
+        <Footer/>
         </div>
       </div>
     </Router>

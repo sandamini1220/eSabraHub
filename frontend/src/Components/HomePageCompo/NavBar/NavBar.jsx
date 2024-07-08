@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+import {  Link  } from 'react-scroll';
 import './NavBar.css';
 import logo from '../../../Assets/logo-eSabraHub.png';
 
@@ -31,7 +31,18 @@ const NavBar = () => {
       setTargetSection(sectionId);
       navigate('/');
     } else {
-      setTargetSection(sectionId);
+      scrollToSection(sectionId);
+    }
+  };
+
+  const scrollToSection = (sectionId) => {
+    const sectionElement = document.getElementById(sectionId);
+    if (sectionElement) {
+      const top = sectionElement.offsetTop + window.pageYOffset - 100;
+      window.scrollTo({
+        top,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -39,7 +50,8 @@ const NavBar = () => {
     if (targetSection) {
       const sectionElement = document.getElementById(targetSection);
       if (sectionElement) {
-        const top = sectionElement.offsetTop;
+        // Calculate the top position relative to the viewport
+        const top = sectionElement.offsetTop + window.pageYOffset - 100;
         window.scrollTo({
           top,
           behavior: 'smooth',
@@ -57,7 +69,7 @@ const NavBar = () => {
         </div>
         <ul>
           <li className="navlist">
-            <ScrollLink
+            <Link
               to="heroId"
               smooth={true}
               offset={-100}
@@ -66,7 +78,7 @@ const NavBar = () => {
               onClick={() => handleScrollToSection('heroId')}
             >
               Home
-            </ScrollLink>
+            </Link>
             <hr />
           </li>
           <li
@@ -96,7 +108,7 @@ const NavBar = () => {
             )}
           </li>
           <li className="navlist">
-            <ScrollLink
+            <Link
               to="aboutId"
               smooth={true}
               offset={-100}
@@ -105,11 +117,11 @@ const NavBar = () => {
               onClick={() => handleScrollToSection('aboutId')}
             >
               About Us
-            </ScrollLink>
+            </Link>
             <hr />
           </li>
           <li className="navlist">
-            <ScrollLink
+            <Link
               to="contactId"
               smooth={true}
               offset={-100}
@@ -118,7 +130,7 @@ const NavBar = () => {
               onClick={() => handleScrollToSection('contactId')}
             >
               Contact Us
-            </ScrollLink>
+            </Link>
             <hr />
           </li>
           <li>

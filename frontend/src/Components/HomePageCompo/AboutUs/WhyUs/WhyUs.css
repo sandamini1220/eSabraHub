@@ -15,11 +15,14 @@
 
 .aboutus-whyus-image img {
    width: 475px;
-   box-shadow: 0 4px 8px rgba(21, 20, 20, 0.2), 0 6px 20px rgba(221, 116, 19, 0.5);
    border-radius: 15px;
+   cursor: pointer;
 }
 
+.aboutus-whyus-image img:hover{
+    box-shadow: 0 4px 8px rgba(21, 20, 20, 0.2), 0 6px 20px rgba(221, 116, 19, 0.5);
 
+}
 .aboutus-whyus-text{
     display: flex;
     flex-direction: column;
@@ -80,5 +83,11 @@
     }
     .aboutus-whyus-image img{
         margin-top: 20px;
+        width: 325px;
+    }
+}
+@media(max-width:500px){
+    .aboutus-whyus-image img{
+        width: 300px;
     }
 }
