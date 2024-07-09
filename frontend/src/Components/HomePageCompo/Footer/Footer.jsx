@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import {  Link as RouterLink, useLocation, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faLinkedin, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import {  faTwitter, faLinkedin, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css';
 import logo from '../../../Assets/logo-eSabraHub.png';
 
