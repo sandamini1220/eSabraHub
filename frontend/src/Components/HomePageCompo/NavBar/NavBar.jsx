@@ -3,6 +3,8 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import {  Link  } from 'react-scroll';
 import './NavBar.css';
 import logo from '../../../Assets/logo-eSabraHub.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faNavicon } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -135,6 +137,9 @@ const NavBar = () => {
           </li>
           <li>
             <button onClick={handleLoginClick}>Login</button>
+          </li>
+          <li>
+          <FontAwesomeIcon icon={faNavicon} className="contactus-icon"/>
           </li>
         </ul>
       </nav>

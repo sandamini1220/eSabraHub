@@ -67,3 +67,16 @@ align-items: center;
     color: #747c7c;
   }
   
+
+  @media(max-width:800px){
+    .features-grid{
+      padding: 0;
+    }
+  }
+
+  @media(max-width:500px){
+    .features-grid{
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+  }
