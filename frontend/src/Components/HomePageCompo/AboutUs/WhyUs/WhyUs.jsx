@@ -18,6 +18,7 @@ const WhyUs = () => {
           chat in a trusted community of verified users.Our dedicated team is always ready to 
           assist with any questions or concerns.</p>
 
+          <div className="whyus-all-lists">
           <div className="list-items-aboutus-whyus">
             <img src={tick} alt="" />
             <p>Comprehensive Information</p>
@@ -43,6 +44,7 @@ const WhyUs = () => {
             <p>Continuous Support</p>
           </div>
 
+          </div>
       </div>
       
     </div>

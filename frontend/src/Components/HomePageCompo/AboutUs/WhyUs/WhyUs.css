@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 60px;
    
 
 }
@@ -90,4 +91,18 @@
     .aboutus-whyus-image img{
         width: 300px;
     }
+    .aboutus-whyus-container{
+        margin: 0 auto;
+    }
+    .aboutus-whyus-text-topic {
+     justify-content: center; 
+    }
+    .aboutus-whyus-image{
+        width: 100%;
+    }
+    .aboutus-whyus-image img {
+        margin: 50px auto 5px;
+    }
+   
+   
 }

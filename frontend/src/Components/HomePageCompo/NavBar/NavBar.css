@@ -1,3 +1,6 @@
+.side-navbar{
+  display: none;
+}
 .navibar {
   background-color: #151414;
   padding: 5px 0;
@@ -6,8 +9,6 @@
   height: 50px;
   top: 0;
   z-index: 1000;
-
-  
 }
 
 .navibar nav {
@@ -59,7 +60,7 @@
 
 .navibar ul button {
   background-color: #dd7413;
-  color:aliceblue;
+  color: aliceblue;
   border: none;
   padding: 10px 40px;
   cursor: pointer;
@@ -124,4 +125,75 @@
   transform: scaleX(0);
   transform-origin: center;
   transition: transform 0.3s ease;
+}
+.navbar-icon{
+  display: none;
+  font-size: 18px;
+}
+
+/* Media Query for side navbar */
+@media (max-width: 700px) {
+  .navibar .logo img {
+    height: 30px;
+  }
+  .navibar .display-none-navibar {
+    display: none;
+  }
+  .navbar-icon{
+    display: block;
+  }
+
+  .side-navbar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: #151414;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+    z-index: 2000;
+  }
+.side-navbar ul {
+  display: flex;
+  flex-direction: column;
+}
+  .side-navbar.open {
+    left: 0;
+  }
+
+  .side-navbar .close-icon {
+    align-self: flex-end;
+    font-size: 24px;
+    cursor: pointer;
+    color: #dd7413;
+  }
+
+  .side-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .side-navbar ul li {
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 16px;
+    color: #e1ded2;
+   
+  }
+
+  .side-navbar ul li:hover {
+    background-color: #dd7413;
+  }
+}
+
+@media(max-width:400px){
+  .side-navbar{
+    width: 100%;
+  }
+
 }
