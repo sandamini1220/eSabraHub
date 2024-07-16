@@ -86,7 +86,7 @@ const Footer = () => {
           {/* Services */}
           <h3>Services</h3>
           <ul className="footer-services-list">
-            <li><RouterLink to="/accommodations">Accommodations</RouterLink></li>
+            <li><RouterLink to="/accommodation">Accommodations</RouterLink></li>
             <li><RouterLink to="/transport">Transport</RouterLink></li>
             <li><RouterLink to="/food">Food Shops</RouterLink></li>
             <li><RouterLink to="/medicine">Medical Centers</RouterLink></li>

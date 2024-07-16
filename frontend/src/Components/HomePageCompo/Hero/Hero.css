@@ -16,13 +16,14 @@
     padding-top: 60px;
 }
 .leftSide-hero p{
-    font-size: 14px;
+    font-size: 16px;
     color: #747c7c;
     
 }
 .leftSide-hero button{
   background-color: #dd7413;
   color: white;
+  font-size: 16px;
   border: none;
   padding: 10px 40px;
   cursor: pointer;
@@ -50,4 +51,19 @@
     color: #dd7413; 
     transition: opacity 0.5s ease-in-out;
     
+  }
+
+  @media(max-width:500px){
+    .leftSide-hero{
+        padding-left: 20px;
+    }
+    .leftSide-hero p{
+        font-size: 14px;
+    } 
+    .leftSide-hero button{
+        font-size: 14px;
+    }
+    .dynamic-word{
+        font-size: 35px;
+    }
   }
