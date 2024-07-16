@@ -37,7 +37,7 @@
 }
 .aboutus-whyus-text p{
     color: #747c7c;
-    font-size: 14px;
+    font-size: 16px;
     margin:  10px 0;
 }
 .aboutus-whyus-text-topic h1{
@@ -63,7 +63,7 @@
 .list-items-aboutus-whyus p{
     text-transform: uppercase;
     color: #151414;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
 }
 
@@ -103,6 +103,17 @@
     .aboutus-whyus-image img {
         margin: 50px auto 5px;
     }
+    .aboutus-whyus-text p{
+        font-size: 14px;
+       
+    }
+    .aboutus-whyus-text-topic h1{
+        font-size: 25px;
+    }
+    .aboutus-whyus-text-topic span{
+        font-size: 25px;
+      
+   }
    
    
 }

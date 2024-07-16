@@ -15,9 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 60px;
 }
 
 .navibar .logo img {
@@ -36,13 +34,13 @@
 .navibar ul li {
   color: #e1ded2;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
 }
 
 .navibar ul li a {
   color: #e1ded2;
-  font-size: 14px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -64,6 +62,7 @@
   border: none;
   padding: 10px 40px;
   cursor: pointer;
+  font-size: 16px;
   border-radius: 5px;
 }
 
@@ -129,6 +128,7 @@
 .navbar-icon{
   display: none;
   font-size: 18px;
+  color: #dd7413;
 }
 
 /* Media Query for side navbar */
@@ -195,5 +195,9 @@
   .side-navbar{
     width: 100%;
   }
+  
+.navibar nav{
+  padding: 0 20px;
+}
 
 }
