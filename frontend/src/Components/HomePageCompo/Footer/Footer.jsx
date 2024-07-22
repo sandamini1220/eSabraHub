@@ -93,6 +93,7 @@ const Footer = () => {
             <li><RouterLink to="/places">Attractions</RouterLink></li>
           </ul>
         </div>
+        
 
         <div className="footer-social">
           <h3>Follow Us On</h3>
