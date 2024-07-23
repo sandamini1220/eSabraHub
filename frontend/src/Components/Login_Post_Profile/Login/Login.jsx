@@ -11,42 +11,55 @@ const Login = () => {
     password: '',
     confirmPassword: '',
   });
+  const [passwordValid, setPasswordValid] = useState(true);
+  const [passwordTooShort, setPasswordTooShort] = useState(false);
   const { authState, login, signup } = useAuth();
   const navigate = useNavigate();
+
+  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+    if (name === 'password') {
+      setPasswordValid(passwordPattern.test(value));
+      setPasswordTooShort(value.length < 8);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       if (isSignup) {
         if (formData.password !== formData.confirmPassword) {
           alert("Passwords don't match");
           return;
         }
-        await signup(formData.username, formData.email, formData.password, formData.confirmPassword);
+
+        if (!passwordValid) {
+          alert("Password must be at least 8 characters long and include a mix of uppercase and lowercase letters, numbers, and special characters.");
+          return;
+        }
+
+        await signup(formData.username, formData.email, formData.password);
         alert('Signup successful');
       } else {
         await login(formData.email, formData.password);
         alert('Login successful');
       }
-  
-      // Log user details
+
       console.log('User:', authState.user);
-      console.log('User Email:', authState.user?.email); // Optional chaining
+      console.log('User Email:', authState.user?.email);
       console.log('User ID:', authState.user?.id);
       console.log('Token:', authState.token);
-  
-      navigate('/posts'); // Redirect to the /posts page after successful login or signup
-      
+
+      navigate('/posts');
     } catch (error) {
       alert(`Error: ${error.message}`);
     }
   };
-  
 
   return (
     <div className="auth-container">
@@ -78,6 +91,16 @@ const Login = () => {
           onChange={handleInputChange}
           required
         />
+        {passwordTooShort && (
+          <p className="password-message">
+            Password must be at least 8 characters long.
+          </p>
+        )}
+        {!passwordValid && !passwordTooShort && (
+          <p className="password-message">
+            Use a mix of uppercase and lowercase letters, numbers, and special characters.
+          </p>
+        )}
         {isSignup && (
           <input
             type="password"
@@ -108,3 +131,9 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+
+
+

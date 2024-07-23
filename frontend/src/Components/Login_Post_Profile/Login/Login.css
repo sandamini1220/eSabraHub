@@ -77,3 +77,9 @@
   .login-bottom-part p span:hover {
     color: #dd7513;
   }
+
+  .password-message {
+    color: red;
+    font-size: 0.8rem;
+  }
+  
