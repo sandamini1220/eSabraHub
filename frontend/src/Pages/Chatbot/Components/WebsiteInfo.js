@@ -1,6 +1,26 @@
 export const WebsiteInfo = `
-if user type Hello bot should reply as a Hello there, How was today. this is eSabra Hub Platform designed to bridging the gap between the students and staff of 
+if user type Hello, bot should reply as a Hello there, How was today. this is eSabra Hub Platform designed to bridging the gap between the students and staff of 
 Sabaragamuwa University and the local community.
+
+What is eSabraHub - eSabraHub is an initiative aimed at bridging the gap between the students and staff of 
+Sabaragamuwa University and the local community. Located in a rural setting, the university premises often 
+present challenges to new students, especially freshers, who are unfamiliar with the area and the available 
+facilities. Freshers typically struggle to find reliable information about essential services such as food outlets, 
+medical centers, accommodation, and transportation options. Recognizing this need, we propose 
+"eSabraHub" a comprehensive web-based application designed to provide easy access to crucial 
+information and services.
+
+What is aims of eSabraHub - eSabraHub aims to serve as an indispensable resource for Sabaragamuwa University students, staff, and 
+the local villagers by offering detailed listings and user-generated content about various local services and 
+amenities. The platform includes features such as an interactive map to help users locate nearby facilities, 
+detailed accommodation listings, information on food delivery and takeout options, transport services, and 
+medical center details. Additionally, the website will highlight places of interest and nearby attractions, 
+helping students, staff, and locals alike to explore and utilize the area more effectively. 
+
+What are the Key Features of eSabraHub - A key feature of "eSabraHub" is the integration of a chatbot designed to assist users by providing quick 
+responses to common queries and guiding them through the platform's features. The chatbot will cater to the 
+specific needs of students, staff, and villagers, offering tailored assistance for academic queries, 
+administrative tasks, local services, and more. 
 
 Introduction:
 The "eSabraHub" project is an initiative aimed at bridging the gap between the students and staff of 
