@@ -25,7 +25,7 @@
 
 What sets **eSabrahub** apart is its focus on building a sense of community through real-time interactions and tailored recommendations. The platform features user-generated content, such as posts and likes, along with a real-time chat application for seamless communication. The integration of AI offers personalized solutions and automation for a smarter, more efficient user experience.
 
-## Key Features 🌟
+## Key Features 
 
 - 🏠 **Accommodation, Transport, and Medical Information**  
   Provides easy access to essential resources for students, staff, and the community, all integrated with location details for easy navigation.
@@ -52,7 +52,7 @@ What sets **eSabrahub** apart is its focus on building a sense of community thro
 
 
 
-## Tech Stack 💻
+## Tech Stack 
 
 - **Frontend**: React.js
 - **Backend**: Node.js, Express.js
@@ -62,7 +62,7 @@ What sets **eSabrahub** apart is its focus on building a sense of community thro
 
 ---
 
-## Installation & Setup 🛠️
+## Installation & Setup 
 
 ### 1. Install Node.js and NPM
 
@@ -141,7 +141,7 @@ node index.js
 The frontend will be available at: http://localhost:3000
 The backend will be available at: http://localhost:5000
 
-## 🚀Usage
+## Usage
 
 Once the app is running, you can interact with the platform. Here are some of the things you can do:
 
@@ -168,7 +168,7 @@ Provides personalized suggestions to users based on their preferences and activi
 
 ---
 
-##🗺️ Google Maps Integration
+## Google Maps Integration
 eSabraHub integrates Google Maps to help users easily find locations such as accommodation, transport, medical centers, and food shops. To enable Google Maps functionality:
 
 Obtain a Google Maps API key from Google Cloud Platform.
@@ -180,7 +180,7 @@ GOOGLE_MAPS_API_KEY=your_google_maps_api_key_here
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
 **👤 Prabodha**  
 **👤 Sandamini**  
@@ -192,7 +192,7 @@ Thank you to all the team members for their contributions to eSabrahub!
 
 ---
 
-## 📧 Contact Us
+##  Contact Us
 
 If you have any questions, suggestions, or feedback, feel free to reach out to us!
 
