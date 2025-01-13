@@ -1,0 +1,21 @@
+.profilePage-container-three-parts{
+    display: flex;
+    flex-direction: row;
+}
+.profilepage-leftpane{
+    flex: 2;
+    height: 95vh;
+   
+}
+.profilepage-middlepage{
+    flex: 3;
+}
+.profilepage-rightpage{
+    flex: 2;
+}
+
+@media(max-width:1000px){
+    .profilePage-container-three-parts{
+        flex-direction: column;
+    }
+}

@@ -20,6 +20,7 @@ import Profile from './Components/Login_Post_Profile/Profile/Profile';
 import ProfilePage from './Pages/ProfilePage';
 import ServiceDetails from './Components/ServicesCompo/ServiceDetails/ServiceDetails';
 import ChatDisplay from './Components/ChatAppCompo/Chat Display/ChatDisplay';
+import Chatbot from './Pages/Chatbot/Chatbot';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
               <Route path="/details/:id" element={<ServiceDetails />} />
 
             </Routes>
+            <Chatbot/>
             <Footer />
           </div>
         </div>
