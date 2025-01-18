@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useAuth } from '../../../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
-import PostPage from '../../../Pages/PostPage';
+import { toast } from 'react-toastify'; // Import Toastify for notifications
+
 
 const Login = () => {
   const [isSignup, setIsSignup] = useState(false);
@@ -17,8 +18,10 @@ const Login = () => {
   const { authState, login, signup } = useAuth();
   const navigate = useNavigate();
 
+  // Password validation pattern
   const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
+  // Handle input changes
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -29,36 +32,45 @@ const Login = () => {
     }
   };
 
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       if (isSignup) {
+        // Password confirmation check
         if (formData.password !== formData.confirmPassword) {
           alert("Passwords don't match");
           return;
         }
 
+        // Password validation check
         if (!passwordValid) {
-          alert("Password must be at least 8 characters long and include a mix of uppercase and lowercase letters, numbers, and special characters.");
+          alert(
+            'Password must be at least 8 characters long and include a mix of uppercase and lowercase letters, numbers, and special characters.'
+          );
           return;
         }
 
-        await signup(formData.username, formData.email, formData.password);
-        alert('Signup successful');
+        // Call signup function with all required fields
+        await signup(
+          formData.username,
+          formData.email,
+          formData.password,
+          formData.confirmPassword
+        );
+        toast.success('Signup successful')
       } else {
+        // Call login function
         await login(formData.email, formData.password);
-        alert('Login successful');
+        toast.success('Login successful')
       }
 
-      console.log('User:', authState.user);
-      console.log('User Email:', authState.user?.email);
-      console.log('User ID:', authState.user?.id);
-      console.log('Token:', authState.token);
-
+      // Navigate to posts page after successful login/signup
       navigate('/posts');
     } catch (error) {
-      alert(`Error: ${error.message}`);
+      toast.error('Invalid Credentials')
+
     }
   };
 
@@ -116,28 +128,19 @@ const Login = () => {
         <div className="login-bottom-part">
           {isSignup ? (
             <p>
-              Already have an account? 
+              Already have an account?
               <span onClick={() => setIsSignup(false)}> Login here</span>
             </p>
           ) : (
             <p>
-              Create an account? 
+              Create an account?
               <span onClick={() => setIsSignup(true)}> Click here</span>
             </p>
           )}
         </div>
       </form>
-      <div className='post'>
-        <PostPage />
-      </div>
     </div>
   );
 };
 
 export default Login;
-
-
-
-
-
-
