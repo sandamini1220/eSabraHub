@@ -1,6 +1,12 @@
 // src/components/AccommodationCompo.js
 
-
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {  faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import './CommonServices.css';
+import { fetchServicesByType } from './Api';
 
 
 const MedicalCompo = () => {
@@ -44,7 +50,7 @@ const MedicalCompo = () => {
               style={{ cursor: 'pointer' }} 
             >
               <img
-                src={`http://localhost:5000/uploads/mainphotos/${service.mainPhoto}`}
+                src={`http://localhost:5000/uploads/mainphotos/${service.mainPhoto}`} //Update images
                 alt={service.name}
                 className="service-main-photo"
               />
